@@ -14,7 +14,7 @@ import axios from "axios";
 import { useMutation } from "convex/react";
 import uuid4 from "uuid4";
 import { api } from "@/convex/_generated/api";
-import { Loader2, Sparkles, Shield, Zap } from "lucide-react";
+import { Loader as Loader2, Sparkles, Shield, Zap } from "lucide-react";
 import { toast } from "sonner";
 
 function SignInDialog({ openDialog, closeDialog }) {

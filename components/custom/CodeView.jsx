@@ -14,7 +14,7 @@ import Prompt from "@/data/Prompt";
 import { useConvex, useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { useParams } from "next/navigation";
-import { Loader2Icon, Code, Eye, FileText, Play, Download, Share } from "lucide-react";
+import { Loader as Loader2Icon, Code, Eye, FileText, Play, Download, Share } from "lucide-react";
 import { Button } from "../ui/button";
 import { toast } from "sonner";
 
