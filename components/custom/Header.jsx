@@ -33,14 +33,16 @@ function Header() {
     <header className="w-full p-4 flex items-center justify-between border-b border-white/10 bg-gray-900/50 backdrop-blur-xl">
       {/* Logo */}
       <Link href={'/'} className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-        <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-          <Zap className="w-4 h-4 text-white" />
-        </div>
+        <img 
+          src="https://res.cloudinary.com/dkpwmrjkq/image/upload/v1759128371/Screenshot_20250929_121442_xzjiei.jpg" 
+          alt="Z Flow Logo" 
+          className="w-10 h-10 rounded-lg object-cover shadow-lg"
+        />
         <div>
           <h1 className="text-lg font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Z Flow
           </h1>
-          <p className="text-xs text-gray-500 -mt-1">by Hemanth M</p>
+          <p className="text-xs text-gray-500 -mt-1">SRMIST</p>
         </div>
       </Link>
       

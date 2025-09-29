@@ -74,17 +74,26 @@ function Hero() {
       <div className="relative z-10 flex flex-col items-center mt-20 xl:mt-32 gap-8 max-w-6xl mx-auto px-4 text-center">
         {/* Brand Section */}
         <div className="flex items-center gap-3 mb-4">
-          <div className="relative">
-            <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
-              <Zap className="w-6 h-6 text-white" />
+          <div className="flex items-center gap-4">
+            <div className="relative">
+              <img 
+                src="https://res.cloudinary.com/dkpwmrjkq/image/upload/v1759128371/Screenshot_20250929_121442_xzjiei.jpg" 
+                alt="Z Flow Logo" 
+                className="w-16 h-16 rounded-xl shadow-lg object-cover"
+              />
+              <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full animate-ping"></div>
             </div>
-            <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full animate-ping"></div>
+            <img 
+              src="https://res.cloudinary.com/dkpwmrjkq/image/upload/v1755014169/Screenshot_2025_0812_212453_xtm6qn.jpg" 
+              alt="College Logo" 
+              className="w-16 h-16 rounded-xl shadow-lg object-cover"
+            />
           </div>
-          <div className="text-left">
+          <div className="text-center">
             <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Z Flow
             </h1>
-            <p className="text-xs text-gray-400">Powered by Hemanth M</p>
+            <p className="text-xs text-gray-400">Powered by Hemanth M • SRMIST</p>
           </div>
         </div>
 

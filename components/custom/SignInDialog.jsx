@@ -66,11 +66,20 @@ function SignInDialog({ openDialog, closeDialog }) {
           <DialogHeader className="text-center space-y-4">
             {/* Logo */}
             <div className="flex justify-center mb-4">
-              <div className="relative">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
-                  <Zap className="w-8 h-8 text-white" />
+              <div className="flex items-center gap-4">
+                <div className="relative">
+                  <img 
+                    src="https://res.cloudinary.com/dkpwmrjkq/image/upload/v1759128371/Screenshot_20250929_121442_xzjiei.jpg" 
+                    alt="Z Flow Logo" 
+                    className="w-16 h-16 rounded-2xl shadow-lg object-cover"
+                  />
+                  <div className="absolute -top-1 -right-1 w-5 h-5 bg-green-500 rounded-full animate-ping"></div>
                 </div>
-                <div className="absolute -top-1 -right-1 w-5 h-5 bg-green-500 rounded-full animate-ping"></div>
+                <img 
+                  src="https://res.cloudinary.com/dkpwmrjkq/image/upload/v1755014169/Screenshot_2025_0812_212453_xtm6qn.jpg" 
+                  alt="College Logo" 
+                  className="w-16 h-16 rounded-2xl shadow-lg object-cover"
+                />
               </div>
             </div>
 

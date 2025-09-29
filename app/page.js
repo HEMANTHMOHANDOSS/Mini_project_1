@@ -15,12 +15,6 @@ export default function Home() {
 
 function HomeContent() {
   const { userDetail } = useContext(UserDetailContext);
-  const { setOpen } = useSidebar();
-
-  // Close sidebar on home page
-  useEffect(() => {
-    setOpen(false);
-  }, [setOpen]);
 
   if (userDetail) {
     return <Dashboard />;
