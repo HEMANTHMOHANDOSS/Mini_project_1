@@ -2,24 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { UserDetailContext } from '@/context/UserDetailContext';
 import { useConvex } from 'convex/react';
 import { api } from '@/convex/_generated/api';
-import { 
-  BarChart3, 
-  Activity, 
-  Zap, 
-  Users, 
-  Clock, 
-  TrendingUp, 
-  Database,
-  Cpu,
-  Memory,
-  HardDrive,
-  Wifi,
-  Plus,
-  ArrowRight,
-  Star,
-  Calendar,
-  Settings
-} from 'lucide-react';
+import { ChartBar as BarChart3, Activity, Zap, Users, Clock, TrendingUp, Database, Cpu, MemoryStick as Memory, HardDrive, Wifi, Plus, ArrowRight, Star, Calendar, Settings } from 'lucide-react';
 import { Button } from '../ui/button';
 import { useSidebar } from '../ui/sidebar';
 import Link from 'next/link';
