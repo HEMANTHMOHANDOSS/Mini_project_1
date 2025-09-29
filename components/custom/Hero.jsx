@@ -1,7 +1,6 @@
 "use client"
 import { MessagesContext } from "@/context/MessagesContext";
 import { UserDetailContext } from "@/context/UserDetailContext";
-import Colors from "@/data/Colors";
 import Lookup from "@/data/Lookup";
 import { ArrowRight, Link, Sparkles, Code, Zap, Rocket, Users, Clock } from "lucide-react";
 import { useContext, useState } from "react";
@@ -15,8 +14,8 @@ import { toast } from "sonner";
 function Hero() {
   const [userInput, setUserInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const {messages,setMessages} = useContext(MessagesContext); 
-  const {userDetail, setUserDetail} = useContext(UserDetailContext);
+  const { messages, setMessages } = useContext(MessagesContext); 
+  const { userDetail, setUserDetail } = useContext(UserDetailContext);
   const [openDialog, setOpenDialog] = useState(false);
   const CreateWorkspace = useMutation(api.workspace.CreateWorkspace);
   const router = useRouter();
@@ -27,7 +26,7 @@ function Hero() {
       return;
     }
     
-    if(!userDetail?.name) {
+    if (!userDetail?.name) {
       setOpenDialog(true);
       return;
     }
@@ -35,23 +34,23 @@ function Hero() {
     setIsLoading(true);
     try {
       const msg = {
-        role:'user',
-        content: input
-      }
+        role: "user",
+        content: input,
+      };
       setMessages([msg]);
       const workspaceId = await CreateWorkspace({
-        user:userDetail._id,
-        messages:[msg]
+        user: userDetail._id,
+        messages: [msg],
       });
       toast.success("Workspace created successfully!");
-      router.push('/workspace/' + workspaceId);
+      router.push("/workspace/" + workspaceId);
     } catch (error) {
       console.error("Error creating workspace:", error);
       toast.error("Failed to create workspace. Please try again.");
     } finally {
       setIsLoading(false);
     }
-  }
+  };
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter" && !e.shiftKey) {
@@ -201,12 +200,12 @@ function Hero() {
             <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">
               <Clock className="w-6 h-6 text-cyan-400" />
             </div>
-            <h3 className="text-2xl font-bold text-white mb-1">< 30s</h3>
+            <h3 className="text-2xl font-bold text-white mb-1">&lt; 30s</h3>
             <p className="text-gray-400 text-sm">Average Build Time</p>
           </div>
         </div>
 
-        <SignInDialog openDialog={openDialog} closeDialog={(v)=>setOpenDialog(v)}/>
+        <SignInDialog openDialog={openDialog} closeDialog={(v) => setOpenDialog(v)} />
       </div>
     </div>
   );
